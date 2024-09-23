@@ -21,10 +21,6 @@
       "url": "mailto:reportbotproject@gmail.com"
     }
   ],
-  "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
-  },
   "anchors": [
     {
       "name": "Documentation",
