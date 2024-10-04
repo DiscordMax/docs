@@ -1,0 +1,81 @@
+---
+title: 'Management'
+description: ""
+icon: 'gear'
+---
+Report Bot's management system focuses on managing cases and report tickets efficiently. It allows moderators to handle reports, track case progress, and organize ticket details, simplifying moderation and ensuring your Discord community stays safe and orderly.
+## Case Management
+Learn how to manage Report Bot's report system in your community.
+### Case Edit
+The `/case edit` command on Report Bot lets moderators edit the reason for a case or delete it entirely, providing flexibility to manage case records efficiently.
+
+Get started editing cases using the `/case edit` command.
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`case-id`|Yes       |The case ID for the case you want to edit.|
+### Case Create
+The `/case create` command on Report Bot allows moderators to create a case by entering a user and a case ID from the report ticket. This helps solve report tickets efficiently by bringing up the report panel, allowing moderators to take immediate action.
+
+Get started creating cases using the `/case create` command.
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`user`|Yes       |User you want to create a case on, can be a User ID or mention.|
+|`case-id`|Yes       |The case ID for the report ticket.|
+### Lookup
+Learn how to lookup completed cases handled through Report Bot.
+#### User
+The `/lookup user` command on Report Bot allows you to view all cases associated with a specific user. It provides a list showing each case ID, the moderator involved, creation date, punishment, and reason, making it easy to review a user's history.
+
+Get started looking up a user's cases using the `/lookup user` command.
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`user`|Yes       |User you want to lookup, can be a User ID or mention.|
+#### Case ID
+The `/lookup case-id` command on Report Bot lets you look up a specific case by its ID. It displays details such as the reported user, reporter, proof, reason, moderator, punishment, and creation date, giving a comprehensive overview of the case.
+
+Get started looking up a cases using the `/lookup case-id` command.
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`case-id`|Yes       |The case ID for the case you want to lookup.|
+#### User App
+The Look up User App on Report Bot allows you to quickly look up a user's cases by simply right-clicking on their profile. It shows all associated cases, including case IDs, moderator, creation date, punishment, and reason, making user history easy to access.
+
+To use the Look up User App `Right click on the user > Apps > Look up User`.
+## Ticket Management
+Learn how to manage Report Bot’s ticket system in your community.
+### Ticket Close
+The `/ticket close` command on Report Bot allows you to close a report ticket, either by providing a reason or leaving it blank. This helps moderators efficiently manage and conclude resolved tickets.
+
+Get started closing tickets using the `/ticket close` command. 
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`reason`|No       |Reason for closing the report ticket.|
+### Ticket Name
+The `/ticket name` command on Report Bot allows you to rename the report ticket channel, making it easier to identify and organize tickets by relevant details.
+
+Get started renaming tickets using the `/ticket name` command. 
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`edit`|Yes       |New name you have chosen for the report ticket.|
+### Ticket Add
+The `/ticket add` command on Report Bot allows you to add another user to the report ticket, providing them with access to the report ticket channel to assist in resolving the report.
+
+Get started adding users using the `/ticket add` command. 
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`user`|Yes       |User you want to add, can be a User ID or mention.|
+### Ticket Remove
+The `/ticket remove` command on Report Bot allows you to remove a user from accessing the report ticket channel, restricting their ability to view or contribute to the ongoing discussion.
+
+Get started removing users using the `/ticket add` command. 
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`user`|Yes       |User you want to remove, can be a User ID or mention.|
+### Ticket Request Close
+The `/ticket request-close` command on Report Bot lets you request to close a ticket, with optional fields for adding a reason and setting an expiration time. If no response is received before the set time, the ticket will automatically close, streamlining the resolution process.
+
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`expire`|No       |Time until the close request expires.|
+|`reason`|No       |Reason for closing the report ticket.|
+

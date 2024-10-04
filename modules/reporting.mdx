@@ -1,0 +1,85 @@
+---
+title: 'Reporting'
+description: ""
+icon: 'flag'
+---
+Report Bot's report system makes it easy to file reports, attach up to four proof files, and manage cases efficiently. It's designed to simplify moderation, helping you keep your Discord community safe.
+## Configure Reports
+
+Learn how to configure Report Bot's report system to fit your community.
+
+### Report Log Channel
+The Report Log Channel is used as a channel where every report made will be logged. The report log channel sends the report log panel which includes moderation actions. We suggest you make your report channel private and only viewable by moderators.
+
+You can configure this by using the `/config reports` command, pressing the dropdown menu, and selecting `Report Log Channel`
+<Warning>
+This configuration is required in order to use the report system.
+</Warning>
+### Action Channel
+The Action Log Channel is used as a channel where every action taken on a report will be logged. The action log channel is not a required configuration, though we do encourage you to have one.
+
+You can configure this by using the `/config reports` command, pressing the dropdown menu, and selecting `Action Log Channel`
+### Moderator Roles
+Moderator Roles are used to check if a user is a moderator and can use the report log embed. The moderator role is supposed to be a role within your server that reviews reports and can take action on users.
+
+You can configure this by using the `/config reports` command, pressing the dropdown menu, and selecting `Moderator Roles`
+<Tip>
+You can select up to **5** moderator roles. 
+</Tip>
+### Moderation Buttons
+Moderation Buttons are used to take action against reported users. These actions will appear of the report message in the report log. This allows you to configure which buttons you would like to display. The default display is Ban, Kick, Timeout, Warn, and None.
+
+You can configure this by using the `/config reports` command, pressing the dropdown menu, and selecting `Moderation Buttons`
+### Mentions
+The Mentions config is used to determine if you'd like the "Moderator" role to be pinged upon a new report. In order to use the mention configuration you will need to setup a moderator role. Enabling the mentions config helps ensure your community is safe.
+
+You can configure this by using the `/config reports` command, pressing the dropdown menu, and selecting `Mentions`
+<Warning>
+You must have [Moderator Roles](#moderator-roles) Configured to use this option.
+</Warning>
+### Case Updates
+The Case Updates config is used to determine if you'd like the Reporter to be updated when an action is taken on their report. Enabling the case update config connects moderators with the community. This is enabled as a default config.
+
+You can configure this by using the `/config reports` command, pressing the dropdown menu, and selecting `Case Updates`
+## Report Command
+
+You can begin reporting a user by using the command `/report`. All of the options for the report command are listed in the table below.
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`user`   | Yes      |User you want to report, can be a User ID or mention.|
+|`reason` | Yes      |Reason you are reporting the user.|
+|`proof`  | Yes      |Add a video or photo as an attachment for proof. |
+|`proof-2`| No       |Add a video or photo as an attachment for proof. |
+|`proof-3`| No       |Add a video or photo as an attachment for proof. |
+|`proof-4`| No       |Add a video or photo as an attachment for proof. |
+
+## Report Apps
+The Report Apps in Report Bot offer a faster, simpler way to submit reports. With just a right-click on a user or message, you can quickly report without hassle, making moderation more efficient than ever.
+### Report User
+The Report User App in Report Bot allows you to quickly report a user with just a right-click. It's a fast and efficient way to report a user and keep your Discord community safe, all in a matter of seconds.
+
+To use the Report User App `Right click on the user > Apps > Report User > Insert Proof Link`.
+<Warning>
+Your `proof` must be a valid link. Any invalid links will be discarded.
+</Warning>
+### Report Message
+The Report Message App in Report Bot makes reporting specific messages quick and easy. Simply right-click on the message to submit a report instantly, streamlining moderation and ensuring reports are addressed efficiently.
+
+To use the Report User App `Right click on the message > Apps > Report Message`.
+
+## Report Panel
+The Report Panel in Report Bot provides a dedicated channel for easy reporting. Similar to the ticket panel, but without the need to open tickets, users simply fill out a form with the required report information, making the process quick and organized.
+
+The following options will need to be filled out in a pop-up modal.
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|User ID| Yes      |User you want to report, this must be a valid user ID.|
+|Reason | Yes      |Reason you are reporting the user.|
+|Proof  | Yes      |Add a video or photo as a link for proof.|
+<Warning>
+Your `proof` must be a valid link. Any invalid links will be discarded.
+</Warning>
+### Report Panel Channel
+The Report Panel Channel is used as a channel where the report creation embed and button will be posted. We suggest the channel you choose is viewable by all members.
+
+You can configure this by using the `/config reports` command, pressing the dropdown menu, and selecting `Report Panel Channel`

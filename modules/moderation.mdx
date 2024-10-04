@@ -1,0 +1,45 @@
+---
+title: 'Moderation'
+description: ""
+icon: 'gavel'
+---
+Report Bot includes essential moderation commands like ban, kick, timeout, and warn to help keep your Discord community safe and well-regulated. These commands give moderators the power to manage disruptive behavior, enforce server rules, and maintain a positive environment efficiently—all through Report Bot.
+<Note>
+These Moderator Roles are the same as the [Report System Moderator Roles](/modules/reporting#moderator-roles)
+</Note>
+# Ban
+The `/ban` command on Report Bot allows moderators to permanently remove a user from the server, with an optional reason. This helps keep your community safe by swiftly addressing severe rule violations.
+
+Get started banning members using the `/ban` command
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`user`|Yes       |User you want to ban, can be a User ID or mention.|
+|`reason`|No       |Reason for banning the user.|
+# Kick
+The `/kick` command on Report Bot allows moderators to remove a user from the server temporarily, with an optional reason. This is useful for addressing disruptive behavior without a permanent ban.
+
+Get started kicking members using the `/kick` command
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`user`|Yes       |User you want to kick, can be a User ID or mention.|
+|`reason`|No       |Reason for kicking the user.|
+# Timeout
+The `/timeout` command on Report Bot allows moderators to temporarily restrict a user's ability to interact in the server for a specified duration. This is ideal for managing minor rule infractions and giving users time to cool down.
+
+Get started timing out members using the `/timeout` command
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`user`|Yes       |User you want to timeout, can be a User ID or mention.|
+|`duration`|Yes       |Duration for the timeout.|
+|`reason`|No       |Reason for timing out the user.|
+<Tip>
+Report Bot can read time format for `duration` 
+</Tip>
+# Warn
+The `/warn` command in Report Bot allows moderators to issue a warning to a user for breaking server rules. It helps in addressing minor issues and keeps a record of the warning for future reference.
+
+Get started warning members using the `/warn` command
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|`user`|Yes       |User you want to warn, can be a User ID or mention.|
+|`reason`|No       |Reason for warning the user.|

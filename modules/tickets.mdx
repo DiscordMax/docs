@@ -1,0 +1,49 @@
+---
+title: 'Tickets'
+description: ""
+icon: 'ticket'
+---
+Report Bot's report tickets system lets users open dedicated report tickets, allowing them to provide additional proof and information directly to moderators. This creates a private, organized ticket channel where reports can be managed efficiently and securely. A Transcript of your report ticket will be provided to you upon the conclusion of your report.
+
+## Configure Tickets
+
+Learn how to configure Report Bot's report system to fit your community.
+
+### Ticket Channel
+The Ticket Channel is used as a channel where the ticket creation embed and button will be posted. We suggest the channel you choose is viewable by all members.
+
+You can configure this by using the `/config tickets` command, pressing the dropdown menu, and selecting `Ticket Channel`
+<Warning>
+This configuration is required in order to use the report tickets system.
+</Warning>
+
+### Ticket Category
+The Ticket Category is the category which new tickets will be posted. If this is not configured tickets will *not* be posted in a category.
+
+You can configure this by using the `/config tickets` command, pressing the dropdown menu, and selecting `Ticket Category`
+### Moderator Roles
+Moderator Roles  are used to check if a user is a moderator and can view ticket channels. The moderator role is supposed to be a role within your server that reviews tickets and can take action on users. This role can also be mentioned upon the creation of a ticket.
+
+You can configure this by using the `/config tickets` command, pressing the dropdown menu, and selecting `Moderator Roles`
+<Note>
+These Moderator Roles are seperate from the [Report System Moderator Roles](/modules/reporting#moderator-roles) 
+</Note>
+### Mentions
+The Mentions config is used to determine if you'd like the "Moderator" role to be pinged upon a new ticket. In order to use the mention configuration you will need to setup a moderator role. Enabling the mentions config helps ensure your community is safe.
+
+You can configure this by using the `/config tickets` command, pressing the dropdown menu, and selecting `Mentions`
+<Warning>
+You must have [Moderator Roles](#moderator-roles) Configured to use this option.
+</Warning>
+## Create a Ticket
+To create a report ticket with Report Bot, head to the ticket panel in the [ticket channel](#ticket-channel), click the `Report` button, and fill out the required fields. This will open a dedicated ticket channel where you can provide further details and speak with moderators.
+
+The following options will need to be filled out in a pop-up modal.
+| Options | Required | Description                     |
+| --------|----------| ------------------------------------- |
+|User you want to report| Yes      |User you want to report, this can be a username, user ID, or any other name.|
+|Reason | Yes      |Reason you are reporting the user.|
+|Proof  | Yes      |Add a video or photo as a link for proof. You can always provide more in the ticket.|
+<Info>
+A transcript of your ticket will be provided to you upon the closure of the ticket.
+</Info>
