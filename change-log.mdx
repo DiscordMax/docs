@@ -1,0 +1,315 @@
+---
+title: 'Change Log'
+icon: 'code'
+description: "Check out some of Report Bot's recent updates."
+---
+# v1.9.0
+### v1.9.5
+__[UPDATE] TICKET TRANSCRIPTS:__
+- We've been working diligently behind the scenes to upgrade our transcripts system. Previously, as most know, transcript links—like Discord attachment links—would expire after two weeks. This often led to frustration when users tried to access important proof or conversations, only to find them gone. Now, all transcript files will be uploaded securely to Report Bot itself. You’ll be able to access them anytime through permanent links at [tickets.reportbot.xyz/](https://tickets.reportbot.xyz/).  No more expired links—just reliable, long-term access to every ticket.
+
+__[NEW] MORE TRANSLATIONS:__ 
+- Report Bot now supports multiple languages! You can configure your server’s language, and all bot messages will be translated accordingly. In addition to bot messages being translated, command names and descriptions are localized. Commands and Apps will appear in the language you have configured on Discord.
+  - Report Bot now supports the following languages: Italian, Danish, German, Dutch, Korean, and Japanese in addition to our previously announced languages.
+- Find a translation that is not correct? Submit a fix request here: [Form Link](https://forms.gle/9Pk9ELsSgY1joiNd7) 
+
+__Fixes__
+- Fixed undefined value(s) in the case closed embed if you press the close button on the `/ticket request-close` embed.
+- Fixed an issue where the "Case ID not found" embed would not appear and would cause an error if you used the `/case` command.
+
+### v1.9.0
+__[NEW] TRANSLATIONS:__
+- Report Bot now supports multiple languages! You can configure your server’s language, and all bot messages will be translated accordingly. In addition to bot messages being translated, command names and descriptions are localized. Commands and Apps will appear in the language you have configured on Discord.
+  - Report Bot now supports the following languages: English, French, Spanish, Turkish, Arabic, Chinese, Russian, and Portuguese.
+  - _Note: Arabic is not a supported language on discord, therefore command names and descriptions will not be localized for Arabic speakers._
+- Find a translation that is not correct? Submit a fix request here: [Form Link](https://forms.gle/9Pk9ELsSgY1joiNd7) 
+
+__[NEW] Configure Translations:__
+- You can now use the `/config translations` command to set your server's language. Simply select the language you want report bot to do my selecting the dropdown menu and selecting a language. All Report Bot messages will be sent in the selected language!
+
+__Fixes__
+- Fixed an issue where editing a case reason caused the embed to revert to the old UI.
+- Fixed the ticket moderator config success embed; the "No Permissions" text now correctly appears in a code block.
+- Fixed some action log embeds not appearing with the proper UI.
+- Fixed some error embeds not containing the proper error message icon URL.
+- Fixed an error message when saving the ticket category.
+- Fixed a bug where some embeds for the `/case` command would not show multiple proofs.
+- Fixed a bug where required roles sometimes displayed as IDs instead of names.
+
+__Improvements__
+- Removed footers from error embeds for a more uniform look.
+- Updated certain command descriptions to provide a better description of the command/option.
+
+# v1.8.0
+__[NEW] View/Delete Message:__
+- You are now able to directly view and delete messages, that users reports, from the report embed. All reports that come from the **Report Message** app will now have an additional `View Message` button. Once you click the button you can view the message content and there will be a `Delete Message` button attached.
+  - If the message has already been deleted the `Delete Message` button will appear disabled and an ephemeral reply will send with the message content.
+
+
+__[NEW] Unban Command:__
+- We've decided to expand the range of moderation commands Report Bot has so we've added an unban command. You can now directly unban a user using Report Bot's new `/unban` command.
+
+__Improvements__
+- Report Message App: If a user has already reported a message the bot will return a message that tells them "This message has already been reported." This is to prevent the duplication of reports.
+- Improved handling of button interactions.
+
+__Minor Updates__
+- Minor Update to the help embed.
+- Minor Update to the bot info embed.
+- Added a "docs.reportbot.xyz" status
+- Report Bot now sends a welcome message when someone joins the support server
+
+# v1.7.0
+### v1.7.6
+__Bug Fixes -__
+- Various backend updates and fixes to buttons.
+- Fixed Permissions issues with the automod command.
+- Fixed Whois command erroring when a user had no badges.
+
+__Small Updates -__
+- Updated Help embed to properly show the new stats command.
+- Updated Configuration Save button embeds with new icons. 
+### v1.7.5
+**[NEW]** __Stats__:
+- We are excited to announce we've added a new `/stats` command! This new feature is specifically designed for moderators, enabling them to view the number of cases they've handled through Report Bot's report system.
+ - View the number of bans, kicks, time-outs, and warns you've issued. You will also see the server's total cases and active cases number. 
+
+**[UPDATE]** __Whois Update__:
+- We've enhanced the `/whois` command, allowing you to view user information for users not in your guild. Additionally, we've removed the permissions section of the embed and added a brand new **Record** section.
+  - The goal of this new section is to show a user's record; their total cases, which excludes dismissed cases, and active cases on them (including the case ID).
+
+**Fixes**
+- Fixed an issue where Cases were not being deleted when someone clicked the delete button on the case edit embed.
+- Fixed an issue with the Warn and Timeout Modal's that would sometimes show an interaction failed message.
+- Made some more handling changes on the back end to *hopefully* improve uptime.
+
+**Minor Updates**
+- Minor Update to the Help embed.
+- Minor Update to the Client info embed.
+- Minor Update to the Config Tickets embeds.
+
+### v1.7.1
+__Bug Fixes -__
+- Fixed a major issue with the report system not uploading attachments properly.
+- Fixed an issue where the report panel buttons sometimes would not work.
+- Fixed an issue causing the new commands to not show up properly on the help embed.
+
+### v1.7.0
+**[NEW]** __Manage Tickets__:
+- We are always focused on simplifying the reporting process, we’ve developed new commands to help you manage your report tickets more effectively. These new tools will streamline the process, ensuring that your community's reports are handled efficiently and with greater control.
+  - `/ticket name` - Edit report ticket channel names
+  - `/ticket add` - Add a user to the report ticket
+  - `/ticket remove` - Remove a user from the report tick
+  - `/ticket close` - Close a report ticket
+  - `/ticket request-close` - Request to close a report ticket, can auto close after a set timer expires
+
+**[NEW]** __Moderator Commands__:
+- In our continuing effort to empower communities, we've introduced new moderator commands that allow moderators to take immediate action against users. These commands are designed to enhance community management by providing tools for swift and decisive moderation. 
+  - `/ban`
+  - `/kick`
+  - `/timeout`
+  - `/warn`
+
+**[UPDATE]** __Multiple Proof Attachments__:
+- We've enhanced the `/report` command, allowing you to add up to 4 proof attachments to your reports, making it easier to provide comprehensive evidence for moderators.
+
+**Fixes**
+- Fixed a critical bug that caused the bot to crash due on the close button for tickets.
+- Added better handling for interactions, which previously caused the bot to go down, hopefully limiting the amount of times it goes down.  
+
+**Minor Updates**
+- Update Uptime on botinfo command.
+- Update Uptime on ping command.
+- Updated the help embed to include the new ticket and moderation commands.
+- Update to the timeout button on the report panel, it now opens a modal instead of a select menu.
+
+# v1.6.0
+**[NEW]** __User Report Context Menus__:
+- Report users even faster! For servers that limit a users ability to access slash commands, fear no longer. We have now added user reports to context menus. Simply: `Right click the user you want to report` > `Apps` > `Report User`.
+
+**[NEW]** __Report Panel__:
+- Want to have a dedicated channel for reporting? You now can with our new Report Panel. The Report Panel is similar to our ticket panel; however, users will not be opening tickets, simply filling out a form with the proper report information.
+  - To configure this new feature up use `/config reports` > Click `Report Panel Channel` > `Select a channel`.
+
+**Minor Updates**
+- Small update to configuration embeds.
+- Fixed Spelling on the help embed.
+
+# v1.5.0
+### v1.5.1
+__Bug Fixes -__
+- Fixed an issue which could have lead to the duplication of report ticket IDs.
+- Fixed a major issue with our ticket system. Tickets were not properly logging or counting as cases.
+### v1.5.0
+**[NEW]** __Report - User Interface__:
+- Over the past few weeks, our team has been working around the clock collecting feedback and putting finishing touches on a new UI. With this update, reporting becomes more intuitive and visually appealing. Our redesigned embeds offer a streamlined experience, making it easier than ever for moderators to swiftly view essential information. Experience the future of reporting with our revamped UI today!
+
+**[NEW]** __Case Updates__:
+- Many people have been asking, so we've delivered. Now, whenever a moderator takes action on a report, reporters will receive *instant* notifications, keeping them informed every step of the way. Stay connected and empowered with our latest enhancement to case management!
+
+**[NEW]** __Case Updates Config__:
+- We have added a new configuration to the `/config reports` menu. You can now configure **Case Updates**. You can either enable or disable reporter's ability to view updates on their cases. This is enabled as a default configuration.
+
+**Fixes**
+- Fixed a critical bug with tickets which caused Report Bot to crash.
+- Fixed an issue which could have lead to the duplication of case IDs.
+
+**Minor Updates**
+- Updated language on certain error embeds.
+- Lowered cooldowns.
+- Changed the `App` name **Report To Mod** to **Report Message**.
+# v1.4.0
+### v1.4.5
+__Bug Fixes -__
+- Fixed a bug with the logging of moderator roles.
+- Fixed a bug impacting server with no profile image using the config menu.
+
+__Small Updates -__
+- Small UI and Icon updates to: Help, Whois, Ping, and Botinfo.
+### v1.4.4
+__Bug Fixes -__
+- Fixed a bug impacting ticket channel configuration.
+- Fixed a bug impacting ticket moderator configuration.
+
+__Small Updates -__
+- Small update to the closed ticket DM embed.
+- Small update to the bot info embed.
+### v1.4.0
+**[NEW]** __TICKETS__:
+- Tickets are a whole new way to do reports. Users can create report tickets within your server to talk directly with server moderators. Tickets help make sure the reports you make have the up most detail. Yes, there are transcripts. 😉
+  - Get started with Tickets in your server by using `/config tickets`
+
+**[NEW]** __Case Create__:
+-  How do you take action against a user reported in a ticket? Use the `/case create` command. This command requires you have the Case ID which will be shown on the ticket creation embed. It also requires you provide a user. After you have filled out that information you will get a reply with a familiar panel. You can punish multiple users for the same case ID.
+
+**[NEW]** __Moderator Buttons__:
+- Yes, one of the most asked for features is here. Today we enabling server managers to configure what buttons they want to appear on the report panel. You now have the option of Ban, Kick, Timeout, or Warn. "None" is unable to be removed. 
+ - Get started customizing buttons in your server by using `/config report`
+
+**[UPDATE]** __Configuration__:
+- With the addition of tickets we have decided to make configuration simpler. You now have the option to use `/config tickets` or `/config reports`
+
+- __`/config tickets`__
+  - Ticket Channel
+  - Ticket Category
+  - Ticket Moderator
+  - Ticket Mentions
+- __`/config reports`__
+  - Report Channel
+  - Action Channel
+  - Moderator
+  - Mentions
+  - Moderator Buttons
+
+**[UPDATE]** __AutoMod__:
+- We have heard from the community our current error handling for AutoMod isn't the best. In order to clear up confusion we have updated the messages users will see if there is an error creating an AutoMod rule.
+
+**Minor Updates**
+- Updated Help embed
+- Users with certain server permissions will now be able bypass moderator role requirements when using the report panel buttons.
+
+# v1.3.0
+### v1.3.3
+- A fix for a bug was introduced to fix a critical bug which impacted certain functions on the bot. It impacted the bot's uptime. 
+- Added a cooldown to config menu save buttons.
+- Fixed a bug impacting moderator buttons.
+### v1.3.1-2
+- A fix for a bug is being introduced for report channel selection. Standby while we restart the bot to push through this update.
+### v1.3.0
+ **[NEW]** __CONFIGURATION PANEL__:
+ - Today we are excited to announce our new Configuration Panel. This panel allows server owners/administrations to easily setup Report Bot in their server. Along with this news we have removed every `/config "example"` command and are only using `/config` for the panel. 
+ - On the panel you can now set up to **5** moderator roles.
+
+ **[NEW]** __DM Messages__:
+ - We previously introduced DM messages with Warnings. Today, we are expanding that to every moderation action. Reported users will now get notified if any action has taken on against them.
+
+ **[UPDATE]** __UI Improvements__:
+ - We have been working around the clock to make UI Changes to Report Bot. You will notice more Icons on the `/lookup` command and context menu. We have also changed all report icons to case files to signify an open > closed case.
+
+**[FIX]** __Several Fixes__:
+- We have made several backend fixes to Report Bot to accommodate for the new features and future features. 👀  
+
+**Minor Updates**
+- Updated Help embed
+- Added a new status to Report Bot
+- Updated the ping and automod loading emoji.
+# v1.2.0
+### v1.2.1
+- Various bug fixes with report commands and apps.
+### v1.2.0
+ **[NEW]** __Case Editing__:
+- Today we are excited to announce our new Case Editing. Simply use the command `/case edit` to start editing a user's case. You can edit the following: Edit the case reason, Delete the case.
+
+ **[NEW]** __User Context Menus__:
+- Ever just curious and want to quickly check a user's cases? Now you can with new context menus for users! Simply: `Right the user you want to look up` > `Apps` > `Look up User`.
+
+ **[NEW]** __Mention Configuration__:
+- Alert your moderators quickly when a new report arrives with our new Mention Configuration. Use `/config mention` to enable/disable this configuration. Note: You are required to have a `Moderator Role` setup in order to configure mentions.
+
+**[UPDATE]** __Bot Info__:
+- We have refreshed our bot info embed with a new statistic showing how many total reports Report Bot has logged globally.
+
+**[UPDATE]** __Permissions Needed__:
+- We have locked up the Lookup commands and Context Menu for Moderator's & Administrators only.
+
+**Minor Updates**
+- Various grammar fixes in command information.
+- Help embed updated.
+- Renamed Trusted to Notable on the `/whois` command.
+- Added a staff tag for Report Bot staff to the `/whois` command.
+- Updated ping embed.
+
+# v1.1.0
+**[NEW]** __Context Menus__:
+- Today we are introducing **Context Menus** which allow you to easily report messages to mods. Simply: `Right click a message you want to report` > `Apps` > `Report To Mods`. It is that SIMPLE!
+
+**[UPDATE]** __Look up users__:
+- Previously the `/lookup user` command showed a simple list. We have updated that list! You now have pages if the user has A LOT of reports. Four reports will appear per page and you can select through it using the buttons provided.
+
+**Minor Updates**
+- Now when you warn a user they will receive a DM letting them know they have been warned and the reason.
+- Added `Upvote Report Bot` to the "Links" section of the help message.
+
+**[BUG FIX]** __Bot Info__:
+- We fixed a bug on the `/botinfo` command that showed the incorrect CPU usage. 
+
+# v1.0.0
+What's new? Everything.
+
+**Report Bot**
+- `/report`
+  - Report a user for violating server rules.
+- `/lookup user`
+  - Look up any completed cases on a user.
+- `/lookup case-id
+  - View more information on a case using the unique case ID.
+
+**AutoMod**
+- `/automod flags`
+  - Block content from your server.
+- `/automod keyword`
+  - Block keywords from your server.
+- `/automod mention-spam`
+  - Prevent mention spam.
+- `/automod message-spam`
+  - Prevent mention spam.
+
+**Configuration**
+- `/config report-log`
+  - Configure the channel reports will go to.
+- `/config action-log`
+  - Configure the channel actions will be logged in.
+- `/config moderator`
+  - Configure a moderator role that can handle reports. Note: Server Administrators can bypass this.
+
+**Miscellaneous** 
+- `/whois`
+  - View user information.
+- `/ping`
+  - View the bot's ping
+- `/invite`
+  - Learn how to invite the bot or join the support server.
+- `/help`
+  - View all the bot's commands.
+- `/botinfo`
+  - View the bot's information. 

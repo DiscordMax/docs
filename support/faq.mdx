@@ -1,0 +1,113 @@
+---
+title: 'Frequently Asked Questions'
+sidebarTitle: "FAQ"
+description: ""
+icon: 'comments-question-check'
+---
+Here you’ll find quick answers to common questions about setup, commands, permissions, languages, and more. Whether you're configuring the bot for the first time or troubleshooting a specific feature, this page is here to help you keep your community safe and running smoothly.
+## How do I set up Report Bot for my server?
+To get started, run either the `/config reports` or `/config tickets` commands, depending on which system you want to set up, and choose from the dropdown menu:
+
+**Reports**: Configure the report system used for [`/report`](/modules/reporting#report-command), Report Apps, and the Report Panel. You'll need to set up required channels like:
+  - Report Log Channel (required)
+  - Moderator Roles
+  - (Optional) Action Channel, Mentions, Case Updates, Report Panel Channel, etc.
+
+**Tickets**: Configure the ticket system used for report tickets. You'll need to set up:
+  - Ticket Channel (required)
+  - Ticket Category
+  - Moderator Roles
+  - (Optional) Mentions
+
+## Can I change Report Bot’s language?
+Yes! Report Bot supports multiple languages to better serve diverse communities. You can change the bot’s language by running the `/config translations` command.
+
+Supported languages include:
+
+- English (default)
+- French
+- Spanish
+- Turkish
+- Arabic
+- Chinese
+- Russian
+- Portuguese
+- Italian
+- Danish
+- German
+- Dutch
+- Korean
+- Japanese
+
+Once set, all command responses, modals, and user-facing interactions will display in the selected language for your server.
+
+## What’s the difference between the Report Panel and Report Tickets?
+Both systems are used to collect user reports—but they serve different purposes and workflows:
+| Feature | Report Panel | Report Tickets                     |
+| --------|--------------|------------------------------------|
+|**How it works**|Users click a button in the [**Report Panel Channel**](/modules/reporting#report-panel-channel) and fill out a short form.|Users click a button in the [**Ticket Channel**](/modules/tickets#ticket-channel) and open a private ticket channel.|
+|**User Experience**|Fast and form-based. Users submit a report via modal, no channel is created.|Creates a dedicated private channel for follow-up, conversation, and proof collection.|
+|**Use case**|Best for quick reports that don’t need back-and-forth discussion, or the server does not have any public channels to use the [`/report`](/modules/reporting#report-command) command.|Best for in-depth cases that need moderation dialogue or ongoing investigation.|
+|**Config Needed**|Report Panel Channel ([`/config reports`](/modules/reporting#configure-reports))|Ticket Channel & Ticket Category ([`/config tickets`](/modules/tickets#configure-tickets))|
+|**Proof Format**|Link only|Link or file upload inside the ticket|
+|**Transcript**|No transcript|Transcript sent to DMs at ticket close|
+
+## What’s the difference between the Report system and the Ticket system?
+**Report System**: Used for quick reports via [/report](/modules/reporting#report-command), right-click apps, or the Report Panel. It supports up to 4 attachments and sends reports directly to a log channel.
+
+**Ticket System**: Opens a private channel where reporters and moderators can communicate in detail. Useful for cases requiring follow-up discussion or additional evidence.
+
+## Can users attach proof to reports?
+Yes! Up to 4 proof files can be attached using the `/report` command. If using the right-click `Report User` app, you can paste a link as proof.
+
+## What proof formats are accepted?
+Proof must be in the form of image or video files. For the apps and panel, only valid links are accepted (e.g., links to images/videos hosted on Discord, Imgur, or other trusted services).
+
+## Who can access submitted reports?
+Only users with roles configured under `Moderator Roles` will be able to see reports, take action, and manage submitted cases. Ensure these roles are set via `/config reports` or `/config tickets`.
+
+## Why aren’t my reports showing up?
+Make sure:
+1. You have set the [`Report Log Channel`](/modules/reporting#report-log-channel).
+2. You’re using the correct report method.
+3. Your bot has permission to send messages and embeds in that channel.
+
+If the issue persists, check bot permissions or consult the [support server](https://reportbot.xyz/support).
+
+## How do moderation buttons work?
+When enabled, each report panel will include action buttons (Ban, Kick, Timeout, Warn, or None). These can be customized via `/config reports` > **Moderation Buttons**.
+
+## Can Report Bot notify moderators when a report is filed?
+Yes. [**Enable Mentions**](/modules/reporting#mentions) under `/config reports` to notify users with the **Moderator Role** when new reports are submitted.
+
+## Will reporters get updates on their cases?
+If [Case Updates](/modules/reporting#case-updates) is enabled (default ON), the user who submitted the report will be notified when action is taken.
+
+## Can I delete or edit a case?
+Yes. Use the /case edit command to change the case reason or remove the case entirely.
+<Warning>
+You must have the [Moderator Role](/modules/reporting#moderator-roles) to edit a case.
+</Warning>
+
+## What’s the difference between lookup user and lookup case-id?
+`/lookup user`: Shows all cases tied to a user.
+
+`/lookup case-id`: Displays detailed info about a specific case by ID.
+
+## What permissions are required to configure AutoMod?
+Only Server Owners and Managers can configure AutoMod settings via `/automod` commands. These rules work in collaboration from Discord’s native AutoMod.
+
+## Does Report Bot provide transcripts?
+Yes. When a ticket is closed, the full transcript is automatically sent to the reporter.
+
+## How do I invite Report Bot to my server?
+Use the `/invite` command or visit our websites to find the invite and upvote links.
+
+## How do I get a User ID on Discord?
+To get a user's ID, you need to enable Developer Mode in your Discord settings. Here's how:
+
+1. Go to User Settings (⚙️ icon at the bottom left).
+2. Click on Advanced in the left sidebar.
+3. Toggle on Developer Mode.
+4. Right-click the user you want to get the ID for.
+5. Click "Copy User ID".

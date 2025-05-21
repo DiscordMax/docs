@@ -1,79 +1,75 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Report Bot",
+  "theme": "prism",
+  "background": {
+    "style": "gradient"
+  },
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#E12D2D",
-    "light": "#E12D2D",
-    "dark": "#E12D2D",
+    "primary": "#E22D2D",
+    "light": "#E22D2D",
+    "dark": "#E22D2D",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#E22D2D",
+      "to": "#E22D2D"
     }
+  },
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": true
   },
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:reportbotproject@gmail.com"
+      "url": "https://discord.gg/reportbot"
     }
   ],
+  "topbarCtaButton": {
+    "name": "Add to Server",
+    "style": "pill",
+    "arrow": false,
+    "url": "https://reportbot.xyz/invite"
+  },
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "Website",
+      "icon": "browser",
+      "url": "https://reportbot.xyz"
     }
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Information",
       "pages": [
         "introduction",
-        "quickstart",
-        "development"
+        "change-log"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Modules",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "modules/reporting",
+        "modules/tickets",
+        "modules/management",
+        "modules/moderation",
+        "modules/automod",
+        "modules/miscellaneous"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Support",
       "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "support/faq"
       ]
     }
   ],
   "footerSocials": {
+    "website": "http://reportbot.xyz",
     "discord": "https://discord.gg/reportbot"
   }
 }
